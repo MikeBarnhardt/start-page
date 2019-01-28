@@ -1,0 +1,133 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>New Tab</title>
+        
+        <style type="text/css">
+            :root {
+                --base: hsl(200, 8%, 8%);
+                --base-bright: hsl(200, 16%, 16%);
+
+                --main: #e1cecc;
+
+                --accent: hsl(160, 80%, 64%);
+                --accent-bright: hsl(20, 80%, 64%);
+
+                --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+                --font-size: 16px;
+            }
+
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+            }
+
+            html {
+                background-color: var(--base);
+                color: var(--main);
+                font-family: var(--font-family);
+                font-size: var(--font-size);
+                line-height: 1.25;
+
+                /* '-moz-osx-font-smoothing': 'grayscale', */
+		        -webkit-font-smoothing: antialiased;
+            }
+
+            body {
+                display: flex;
+                font-size: 1rem;
+            }
+
+            .list-container {
+                margin: auto;
+                max-width: 48rem;
+            }
+
+            .list {
+                display: block;
+                margin: 0;
+                padding: 0;
+            }
+
+            .list-item {
+                display: inline;
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
+
+            .list-item:not(:first-child):before {
+                color: var(--base-bright);
+                content: "//";
+                display: inline-block;
+            }
+
+            .list-item-link {
+                color: var(--accent);
+                display: inline-block;
+                padding: 0.5rem;
+                text-decoration: none;
+            }
+
+            .list-item-link:hover {
+                color: var(--accent-bright);
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="list-container">
+            <ul class="list">
+               <li class="list-item">
+                   <a class="list-item-link" href="https://mail.google.com" rel="nofollow noreferrer" target="_blank">Mail</a>
+                </li>
+                
+                <li class="list-item">
+                    <a class="list-item-link" href="https://calendar.google.com" rel="nofollow noreferrer" target="_blank">Calendar</a>
+                </li>
+
+                <li class="list-item">
+                   <a class="list-item-link" href="https://drive.google.com" rel="nofollow noreferrer" target="_blank">Drive</a>
+               </li> 
+            </ul>
+
+            <ul class="list">
+               <li class="list-item">
+                   <a class="list-item-link" href="https://trello.com" rel="nofollow noreferrer" target="_blank">Trello</a>
+                </li>
+                
+                <li class="list-item">
+                    <a class="list-item-link" href="https://github.com/MikeBarnhardt?tab=repositories" rel="nofollow noreferrer" target="_blank">GitHub</a>
+                </li>
+            </ul>
+
+            <ul class="list">
+                <li class="list-item">
+                    <a class="list-item-link" href="https://otakumode.com" rel="nofollow noreferrer" target="_blank">Otaku Mode</a>
+                </li>
+    
+                <li class="list-item">
+                    <a class="list-item-link" href="https://amiami.com" rel="nofollow noreferrer" target="_blank">AmiAmi</a>
+                </li>
+    
+                <li class="list-item">
+                    <a class="list-item-link" href="https://www.rightstufanime.com" rel="nofollow noreferrer" target="_blank">Right Stuf</a>
+                </li> 
+            </ul>
+
+            <ul class="list">
+                <li class="list-item">
+                    <a class="list-item-link" href="https://youtube.com" rel="nofollow noreferrer" target="_blank">YouTube</a>
+                </li>
+
+               <li class="list-item">
+                   <a class="list-item-link" href="https://reddit.com" rel="nofollow noreferrer" target="_blank">Reddit</a>
+               </li>
+            </ul>
+        </div>
+    </body>
+</html>
