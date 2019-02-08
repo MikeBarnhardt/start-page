@@ -6,7 +6,7 @@ A custom browser start and new tab redirect page. Feel free to fork and edit!
 
 ### Chrome
 
-Chrome does not support a custom new tab page out-of-the-box. I use [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) and point it to this repositories [GitHub Pages](https://pages.github.com/) (see below).
+Chrome does not support a custom new tab page out-of-the-box. I use [New Tab Redirect](https://chrome.google.com/webstore/detail/new-tab-redirect/icpgjfneehieebagbmdbhnlpiopdcmna) and point it to this repository's [GitHub Pages](https://pages.github.com/) (see below).
 
 ## Set up with GitHub Pages
 
