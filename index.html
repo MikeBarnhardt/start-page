@@ -7,16 +7,52 @@
 
     <style type="text/css">
       :root {
-        --base: hsl(200, 8%, 8%);
-        --base-bright: hsl(200, 16%, 16%);
+        --background-color: hsl(200, 8%, 8%);
+        --background-color-subtle: hsl(200, 16%, 16%);
 
-        --main: #e1cecc;
+        --text-color: #e1cecc;
+        --text-color-subtle: #e1cecc;
 
-        --accent: hsl(160, 80%, 64%);
-        --accent-bright: hsl(20, 80%, 64%);
+        --primary-color: hsl(160, 80%, 64%);
+        --primary-color-subtle: hsl(20, 80%, 64%);
+
+        --secondary-color: hsl(160, 80%, 64%);
+        --secondary-color-subtle: hsl(20, 80%, 64%);
 
         --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         --font-size: 16px;
+      }
+
+      .theme-vanilla {
+        --background-color: #fdfbf9;
+        --background-color-subtle: #f8f1f3;
+
+        --text-color: #957595;
+        --text-color-subtle: #d3bfd3;
+
+        --primary-color: #33b1f9;
+        --primary-color-subtle: #537bd9;
+
+        --secondary-color: #f39d97;
+        --secondary-color-subtle: #d37d97;
+
+        --font-size: 20px;
+      }
+
+      .theme-chocola {
+        --background-color: #3b2d35;
+        --background-color-subtle: #43333d;
+
+        --text-color: #f9d5d7;
+        --text-color-subtle: #7f5d71;
+
+        --primary-color: #fb5e8b;
+        --primary-color-subtle: #F595b1;
+
+        --secondary-color: #ffbfb0;
+        --secondary-color-subtle: #fb9793;
+
+        --font-size: 20px;
       }
 
       *,
@@ -26,8 +62,8 @@
       }
 
       html {
-        background-color: var(--base);
-        color: var(--main);
+        background-color: var(--background-color);
+        color: var(--text-color);
         font-family: var(--font-family);
         font-size: var(--font-size);
         line-height: 1.25;
@@ -60,21 +96,22 @@
       }
 
       .list-item:not(:first-child):before {
-        color: var(--base-bright);
+        color: var(--text-color-subtle);
         content: "//";
         display: inline-block;
       }
 
       .list-item-link {
-        color: var(--accent);
+        color: var(--primary-color);
         display: inline-block;
         padding: 0.5rem;
         text-decoration: none;
+        transition: color .1s;
       }
 
       .list-item-link:hover {
-        color: var(--accent-bright);
-        text-decoration: underline;
+        color: var(--secondary-color);
+        transition: color .1s;
       }
     </style>
   </head>
@@ -129,5 +166,11 @@
         </li>
       </ul>
     </div>
+
+    <script type="text/javascript">
+      const params = new URLSearchParams(window.location.search);
+      const theme = 'theme-' + params.get('theme');
+      document.getElementsByTagName('html')[0].classList.add(theme);
+    </script>
   </body>
 </html>
