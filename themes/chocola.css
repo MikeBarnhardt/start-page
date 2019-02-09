@@ -1,0 +1,18 @@
+.theme-chocola {
+  --background-color: #3b2d35;
+  --background-color-subtle: #43333d;
+
+  --text-color: #f9d5d7;
+  --text-color-subtle: #7f5d71;
+
+  --primary-color: #fb5e8b;
+  --primary-color-subtle: #F595b1;
+
+  --secondary-color: #ffbfb0;
+  --secondary-color-subtle: #fb9793;
+
+  --font-family: "Hack Nerd Font";
+  --font-size: 16px;
+
+  --separator: "♥";
+}

@@ -3,6 +3,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>New Tab</title>
 
     <style type="text/css">
@@ -21,38 +22,8 @@
 
         --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
         --font-size: 16px;
-      }
 
-      .theme-vanilla {
-        --background-color: #fdfbf9;
-        --background-color-subtle: #f8f1f3;
-
-        --text-color: #957595;
-        --text-color-subtle: #d3bfd3;
-
-        --primary-color: #33b1f9;
-        --primary-color-subtle: #537bd9;
-
-        --secondary-color: #f39d97;
-        --secondary-color-subtle: #d37d97;
-
-        --font-size: 20px;
-      }
-
-      .theme-chocola {
-        --background-color: #3b2d35;
-        --background-color-subtle: #43333d;
-
-        --text-color: #f9d5d7;
-        --text-color-subtle: #7f5d71;
-
-        --primary-color: #fb5e8b;
-        --primary-color-subtle: #F595b1;
-
-        --secondary-color: #ffbfb0;
-        --secondary-color-subtle: #fb9793;
-
-        --font-size: 20px;
+        --separator: "//"
       }
 
       *,
@@ -79,11 +50,11 @@
 
       .list-container {
         margin: auto;
-        max-width: 48rem;
+        width: 50vw;
       }
 
       .list {
-        display: block;
+        display: flex;
         margin: 0;
         padding: 0;
       }
@@ -92,13 +63,22 @@
         display: inline;
         list-style: none;
         margin: 0;
+        overflow: hidden;
         padding: 0;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 25%;
       }
 
-      .list-item:not(:first-child):before {
+      .list-item:before {
         color: var(--text-color-subtle);
-        content: "//";
+        content: var(--separator);
         display: inline-block;
+        transition: color .16s;
+      }
+
+      .list-item:hover:before {
+        color: var(--secondary-color-subtle);
       }
 
       .list-item-link {
@@ -106,14 +86,17 @@
         display: inline-block;
         padding: 0.5rem;
         text-decoration: none;
-        transition: color .1s;
+        transition: color .16s;
       }
 
       .list-item-link:hover {
         color: var(--secondary-color);
-        transition: color .1s;
       }
     </style>
+
+    <!-- Themes must be imported after :root variables -->
+    <link href="themes/vanilla.css" rel="stylesheet"/>
+    <link href="themes/chocola.css" rel="stylesheet"/>
   </head>
 
   <body>
@@ -143,6 +126,10 @@
       </ul>
 
       <ul class="list">
+        <li class="list-item">
+          <a class="list-item-link" href="https://smile.amazon.com" rel="nofollow noreferrer">Amazon</a>
+        </li>
+
         <li class="list-item">
           <a class="list-item-link" href="https://otakumode.com" rel="nofollow noreferrer">Otaku Mode</a>
         </li>
