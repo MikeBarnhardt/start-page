@@ -1,18 +1,7 @@
 .theme-vanilla {
-  --background-color: #fdfbf9;
-  --background-color-subtle: #f8f1f3;
-
-  --text-color: #957595;
-  --text-color-subtle: #d3bfd3;
-
-  --primary-color: #33b1f9;
-  --primary-color-subtle: #537bd9;
-
-  --secondary-color: #f39d97;
-  --secondary-color-subtle: #d37d97;
-
-  --font-family: "Hack Nerd Font";
+  --background-color: #e6dbe6;
+  --color: #7e537e;
+  --color-active: #09b2e2;
+  --font-family: undefined;
   --font-size: 16px;
-
-  --separator: "♥";
 }

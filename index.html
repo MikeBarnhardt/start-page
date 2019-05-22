@@ -4,157 +4,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>New Tab</title>
+    <title>スタートページ</title>
 
-    <style type="text/css">
-      :root {
-        --background-color: #212121;
-        --background-color-subtle: #74705d;
-
-        --text-color: #cfcfc1;
-        --text-color-subtle: #74705d;
-
-        --primary-color: #f82a71;
-        --primary-color-subtle: #f82a71;
-
-        --secondary-color: #a6e12d;
-        --secondary-color-subtle: #a6e12d;
-
-        --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-        --font-size: 16px;
-
-        --separator: "›"
-      }
-
-      *,
-      *::before,
-      *::after {
-        box-sizing: border-box;
-      }
-
-      html {
-        background-color: var(--background-color);
-        color: var(--text-color);
-        font-family: var(--font-family);
-        font-size: var(--font-size);
-        line-height: 1.25;
-
-        -moz-osx-font-smoothing: grayscale;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      body {
-        display: flex;
-        font-size: 1rem;
-      }
-
-      .list-container {
-        margin: auto;
-        width: 50vw;
-      }
-
-      .list {
-        display: flex;
-        margin: 0;
-        padding: 0;
-      }
-
-      .list-item {
-        display: inline;
-        list-style: none;
-        margin: 0;
-        overflow: hidden;
-        padding: 0;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        width: 25%;
-      }
-
-      .list-item:before {
-        color: var(--text-color-subtle);
-        content: var(--separator);
-        display: inline-block;
-        transition: color .16s;
-      }
-
-      .list-item:hover:before {
-        color: var(--secondary-color-subtle);
-      }
-
-      .list-item-link {
-        color: var(--primary-color);
-        display: inline-block;
-        padding: 0.5rem;
-        text-decoration: none;
-        transition: color .16s;
-      }
-
-      .list-item-link:hover {
-        color: var(--secondary-color);
-      }
-    </style>
+    <link href="styles.css" rel="stylesheet"/>
 
     <!-- Themes must be imported after :root variables -->
-    <link href="themes/vanilla.css" rel="stylesheet"/>
+    <link href="themes/astolfo.css" rel="stylesheet"/>
     <link href="themes/chocola.css" rel="stylesheet"/>
+    <link href="themes/vanilla.css" rel="stylesheet"/>
   </head>
 
   <body>
-    <div class="list-container">
-      <ul class="list">
-        <li class="list-item">
-          <a class="list-item-link" href="https://mail.google.com" rel="nofollow noreferrer">Mail</a>
-        </li>
+    <ul class="list">
+      <li class="list-item">
+        <a class="list-item-link" href="https://mail.google.com" rel="nofollow noreferrer">Mail</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://calendar.google.com" rel="nofollow noreferrer">Calendar</a>
-        </li>
+      <li class="list-item">
+        <a class="list-item-link" href="https://calendar.google.com" rel="nofollow noreferrer">Calendar</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://drive.google.com" rel="nofollow noreferrer">Drive</a>
-        </li>
-      </ul>
+      <li class="list-item">
+        <a class="list-item-link" href="https://drive.google.com" rel="nofollow noreferrer">Drive</a>
+      </li>
 
-      <ul class="list">
-        <li class="list-item">
-          <a class="list-item-link" href="https://trello.com" rel="nofollow noreferrer">Trello</a>
-        </li>
+      <li class="list-item">
+        <a class="list-item-link" href="https://trello.com" rel="nofollow noreferrer">Trello</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://github.com/MikeBarnhardt?tab=repositories" rel="nofollow noreferrer">GitHub</a>
-        </li>
-      </ul>
+      <li class="list-item">
+        <a class="list-item-link" href="https://github.com/MikeBarnhardt?tab=repositories" rel="nofollow noreferrer">GitHub</a>
+      </li>
 
-      <ul class="list">
-        <li class="list-item">
-          <a class="list-item-link" href="https://smile.amazon.com" rel="nofollow noreferrer">Amazon</a>
-        </li>
+      <li class="list-item">
+        <a class="list-item-link" href="https://smile.amazon.com" rel="nofollow noreferrer">Amazon</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://otakumode.com" rel="nofollow noreferrer">Otaku Mode</a>
-        </li>
+      <li class="list-item">
+        <a class="list-item-link" href="https://otakumode.com" rel="nofollow noreferrer">Otaku Mode</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://amiami.com" rel="nofollow noreferrer">AmiAmi</a>
-        </li>
+      <li class="list-item">
+        <a class="list-item-link" href="https://amiami.com" rel="nofollow noreferrer">AmiAmi</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://www.rightstufanime.com" rel="nofollow noreferrer">Right Stuf</a>
-        </li>
-      </ul>
+      <li class="list-item">
+        <a class="list-item-link" href="https://youtube.com" rel="nofollow noreferrer">YouTube</a>
+      </li>
 
-      <ul class="list">
-        <li class="list-item">
-          <a class="list-item-link" href="https://youtube.com" rel="nofollow noreferrer">YouTube</a>
-        </li>
+      <li class="list-item">
+        <a class="list-item-link" href="https://reddit.com" rel="nofollow noreferrer">Reddit</a>
+      </li>
 
-        <li class="list-item">
-          <a class="list-item-link" href="https://reddit.com" rel="nofollow noreferrer">Reddit</a>
-        </li>
-      </ul>
-    </div>
+      <li class="list-item">
+        <a class="list-item-link" href="https://twitter.com" rel="nofollow noreferrer">Twitter</a>
+      </li>
+    </ul>
 
     <script type="text/javascript">
+      // Pulls the `theme` parameter from the URL and applies a class to the
+      // root element.
       const params = new URLSearchParams(window.location.search);
       const theme = 'theme-' + params.get('theme');
       document.getElementsByTagName('html')[0].classList.add(theme);

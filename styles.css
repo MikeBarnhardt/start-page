@@ -1,0 +1,58 @@
+:root {
+  /* Colors */
+  --background-color: #1C1128;
+  --color: #A68E78;
+  --color-active: #4E368C;
+
+  /* Fonts */
+  --font-family: undefined, monospace;
+  --font-size: 32px;
+  --line-height: 1.5;
+
+  /* List */
+  --list-width: 50vw;
+  --list-spacing: 0.5rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background-color);
+  color: var(--color);
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  line-height: var(--line-height);
+
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+body {
+  display: flex;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.list {
+  list-style: none;
+  margin: auto;
+  padding: 0;
+  max-width: var(--list-width);
+}
+
+  .list-item {
+    margin-bottom: 0.5rem;
+  }
+
+    .list-item-link {
+      color: var(--color);
+      text-decoration: none;
+    }
+
+    .list-item-link:hover {
+      color: var(--color-active);
+    }
