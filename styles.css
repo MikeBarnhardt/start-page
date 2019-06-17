@@ -1,12 +1,12 @@
 :root {
   /* Colors */
-  --background-color: #1C1128;
-  --color: #A68E78;
-  --color-active: #4E368C;
+  --background-color: #1D1F28;
+  --color: #FDFDFD;
+  --color-active: #5ADECD;
 
   /* Fonts */
-  --font-family: undefined, monospace;
-  --font-size: 2vh;
+  --font-family: Iosevka, monospace;
+  --font-size: 24px;
   --line-height: 1.5;
 
   /* List */
@@ -49,10 +49,14 @@ body {
   }
 
     .list-item-link {
+      box-shadow: inset 0 -2px 0 #FF4971;
       color: var(--color);
+      padding: 0.125rem;
       text-decoration: none;
+      transition: box-shadow 160ms, color 160ms;
     }
 
     .list-item-link:hover {
-      color: var(--color-active);
+      box-shadow: inset 0 -50px 0 var(--color-active);
+      color: var(--background-color);
     }
