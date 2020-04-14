@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -6,46 +7,52 @@
 
     <title>スタートページ</title>
 
-    <link href="styles.css" rel="stylesheet"/>
+    <link href="https://unpkg.com/kitsune-css@3.3.0/dist/kitsune.min.css" rel="stylesheet"/>
+    <link href="themes.css" rel="stylesheet"/>
   </head>
 
-  <body>
-    <ul class="list">
-      <li class="list-item">
-        <a class="list-item-link" href="https://mail.google.com" rel="nofollow noreferrer">Mail</a>
-      </li>
+  <body class="section section--xl stack stack--xl">
+    <div class="stack">
+      <h1 class="heading heading--headline ">
+        <a class="link" href="https://mail.google.com" rel="nofollow noreferrer">Google Mail</a>
+      </h1>
+      <h1 class="heading heading--headline ">
+        <a class="link" href="https://github.com/MikeBarnhardt?tab=repositories" rel="nofollow noreferrer">GitHub</a>
+      </h1>
+      <h1 class="heading heading--headline ">
+        <a class="link" href="https://trello.com" rel="nofollow noreferrer">Trello</a>
+      </h1>
+    </div>
 
-      <li class="list-item">
-        <a class="list-item-link" href="https://calendar.google.com" rel="nofollow noreferrer">Calendar</a>
-      </li>
-
-      <li class="list-item">
-        <a class="list-item-link" href="https://drive.google.com" rel="nofollow noreferrer">Drive</a>
-      </li>
-
-      <li class="list-item">
-        <a class="list-item-link" href="https://github.com/MikeBarnhardt?tab=repositories" rel="nofollow noreferrer">GitHub</a>
-      </li>
-
-      <li class="list-item">
-        <a class="list-item-link" href="https://youtube.com" rel="nofollow noreferrer">YouTube</a>
-      </li>
-
-      <li class="list-item">
-        <a class="list-item-link" href="https://artstation.com" rel="nofollow noreferrer">ArtStation</a>
-      </li>
-
-      <li class="list-item">
-        <a class="list-item-link" href="https://otakumode.com" rel="nofollow noreferrer">Otaku Mode</a>
-      </li>
-    </ul>
-
-    <script type="text/javascript">
-      // Pulls the `theme` parameter from the URL and applies a class to the
-      // root element.
-      const params = new URLSearchParams(window.location.search);
-      const theme = 'theme-' + params.get('theme');
-      document.getElementsByTagName('html')[0].classList.add(theme);
-    </script>
+    <div class="stack">
+      <h1 class="heading heading--headline">
+        <a class="link" href="https://otakumode.com" rel="nofollow noreferrer">Otaku Mode</a>
+      </h1>
+      <h1 class="heading heading--headline">
+        <a class="link" href="https://amiami.com" rel="nofollow noreferrer">AmiAmi</a>
+      </h1>
+      <h1 class="heading heading--headline">
+        <a class="link" href="https://smile.amazon.com" rel="nofollow noreferrer">Amazon Smile</a>
+      </h1>
+    </div>
+    
+    <div class="stack">
+      <h1 class="heading heading--headline ">
+        <a class="link" href="https://reddit.com" rel="nofollow noreferrer">Reddit</a>
+      </h1>
+      <h1 class="heading heading--headline ">
+        <a class="link" href="https://youtube.com" rel="nofollow noreferrer">YouTube</a>
+      </h1>
+    </div>
+    
+    <div id="js-settings">
+      <menu class="menu" role="menu">
+        <div class="theme" role="menuitem">Cyberpunk</div>
+        <div class="theme" role="menuitem">Nero</div>
+        <div class="theme" role="menuitem">Vanilla</div>
+      </menu>
+    </div>
+    
+    <script src="scripts.js" type="text/javascript"></script>
   </body>
 </html>
