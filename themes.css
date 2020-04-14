@@ -14,6 +14,10 @@
   /* Link */
   --kitsune-link-underline-color: hsla(224, 48%, 100%, 0.2);
   --kitsune-link-underline-color-hover: #FF4971;
+
+  /* Menu */
+  --kitsune-menu-background-color: var(--kitsune-html-color);
+  --kitsune-menu-color: var(--kitsune-html-background-color);
 }
 
 /* Nero (Fate)
@@ -26,7 +30,11 @@
 
   /* Link */
   --kitsune-link-underline-color: hsla(0, 48%, 100%, 0.2);
-  --kitsune-link-underline-color-hover: hsl(48, 80%, 72%);
+  --kitsune-link-underline-color-hover: hsl(32, 64%, 72%);
+  
+  /* Menu */
+  --kitsune-menu-background-color: var(--kitsune-html-color);
+  --kitsune-menu-color: var(--kitsune-html-background-color);
 }
 
 /* Vanilla (Nekopara)
@@ -40,6 +48,99 @@
   /* Link */
   --kitsune-link-underline-color: hsla(232, 16%, 48%, 0.2);
   --kitsune-link-underline-color-hover: hsl(208, 80%, 64%);
+  
+  /* Menu */
+  --kitsune-menu-background-color: var(--kitsune-html-color);
+  --kitsune-menu-color: var(--kitsune-html-background-color);
+}
+
+/* =============================================================================
+   Custom
+   ========================================================================== */
+      
+.settings {
+  bottom: 4rem;
+  position: fixed;
+  right: 4rem;
+}
+
+.icon {
+  background-color: var(--kitsune-link-underline-color);
+  border-radius: 9999rem;
+  display: block;
+  height: 1rem;
+  transition: background-color 640ms;
+  width: 1rem;
+}
+
+.icon:hover {
+  background-color: var(--kitsune-link-underline-color-hover);
+  transition: none;
+}
+
+.menu {
+  background-color: var(--kitsune-menu-background-color);
+  bottom: 100%;
+  color: var(--kitsune-menu-color);
+  margin: 0;
+  margin-bottom: 1rem;
+  opacity: 0;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  transform: translateY(1rem);
+  transition:
+    opacity 320ms,
+    transform 320ms;
+  visibility: hidden;
+}
+
+.menu::after {
+  border: 0.5rem solid transparent;
+  border-top-color: var(--kitsune-menu-background-color);
+  content: "";
+  display: block;
+  height: 0.125rem;
+  position: absolute;
+  top: 100%;
+  right: 0.25rem;
+  width: 0.5rem;
+}
+
+.menu.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+
+.theme {
+  cursor: pointer;
+  overflow: hidden;
+  padding: 0.5rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.theme::before {
+  background-color: var(--kitsune-link-underline-color-hover);
+  content: '';
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateX(-100%);
+  transition: transform 320ms;
+  width: 100%;
+  z-index: -1;
+}
+
+.theme:hover {
+  color: var(--kitsune-theme-color-hover);
+}
+
+.theme:hover::before {
+  transform: translateX(0);
 }
 
 /* =============================================================================

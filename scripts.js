@@ -27,12 +27,26 @@ function onLoad() {
   
 }
 
+/**
+ * Set event listeners for all themes.
+ */
 const themes = document.getElementsByClassName('theme');
 
 for (var i = 0; i < themes.length; i++) {
   themes[i].addEventListener('click', changeTheme);
-  themes[i].addEventListener('touchend', changeTheme);
+  themes[i].addEventListener('touch', changeTheme);
 }
+
+/**
+ * Toggle theme menu.
+ */
+ 
+function toggleMenu(event) {
+  document.getElementById('js-settings-menu').classList.toggle('is-open');
+}
+
+document.getElementById('js-settings-toggle').addEventListener('click', toggleMenu);
+document.getElementById('js-settings-toggle').addEventListener('touch', toggleMenu);
 
 (function(){
   onLoad();
