@@ -1,11 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
 html {
   background-color: white;
-  color: hsl(232, 32%, 32%);
-  font-family: Inconsolata, monospace;
-  font-size: 16px;
+  color: hsl(0, 0%, 32%);
+  font-family: "Source Sans Pro", monospace;
+  font-size: 20px;
   line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: grayscale;
 }
 
 body {
@@ -19,7 +21,7 @@ ul {
 }
 
 ul:not(:last-child) {
-  border-bottom: 1px solid hsl(232, 32%, 96%);
+  border-bottom: 1px solid hsl(0, 0%, 96%);
 }
 
 li {
@@ -37,8 +39,9 @@ a {
 a:hover,
 a:focus,
 a:active {
-  background-color: hsl(232, 32%, 96%);
+  background-color: hsl(0, 0%, 96%);
   border-radius: 0.25rem;
+  color: black;
   outline: none;
 }
 
